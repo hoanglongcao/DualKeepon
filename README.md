@@ -1,6 +1,10 @@
 # DualKeepon
 A portable system with My Keepon robots to study user preferences using a pairwise comparison method
 
+##Hacking MyKeepon
+
+A tutorial of hacking MyKeepon robot can  be found in our website: http://probo.vub.ac.be/HackingKeepon/
+
 ##Hardware connection
 Upload the Arduino firmware (new and stable). Arduino Nano with ATmega328P. Baud rate 9600.
 
