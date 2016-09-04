@@ -1,9 +1,24 @@
 # DualKeepon
-A portable system with My Keepon robots to study user preferences using a pairwise comparison method
+A portable system with My Keepon robots to study user preferences using a pairwise comparison method.
+
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/Dual-Keepon-speech.png)
+
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/DualKeepon-Hardware.png)
 
 ##Hacking MyKeepon
 
-A tutorial of hacking MyKeepon robot can  be found in our website: http://probo.vub.ac.be/HackingKeepon/
+A tutorial of hacking MyKeepon robot can  be found in our website: http://probo.vub.ac.be/HackingKeepon. For this DualKeepon project, no shield for Arduino is needed.
+
+This work was presented at RO-MAN 2014:
+
+H.-L. Cao, G. Van de Perre, R. Simut, C. Pop, A. Peca, D. Lefeber, and B. Vanderborght, "Enhancing my keepon robot: A simple and low-cost solution for robot platform in human-robot interaction studies," in Proceedings of the 23rd IEEE International Symposium on Robot and Human Interactive Communication, Edinburgh, UK, August 2014, pp. 555-560. 
+http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6926311
+
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/image008%5B1%5D.jpg)
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/image010%5B1%5D.jpg)
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/image012%5B1%5D.jpg)
+
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/summerschool-1.jpg)
 
 ##Hardware connection
 Upload the Arduino firmware (new and stable). Arduino Nano with ATmega328P. Baud rate 9600.
@@ -16,6 +31,12 @@ Connect to LEFT Keepon and RIGHT Keepon. The connector has 6 contact points: (V0
 
 How to connect to Keepon’s speaker: Pull out the speaker connection and connect it with 2 wires to (S+ and S-).
 
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut1.png)
+
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut2.jpg)
+
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut3.png)
+
 ##How to use the software
 Visual Studio 2013 is used. New versions should be able to run the software.
 
@@ -23,6 +44,8 @@ After running the software, 2 windows appear to connect with 2 Keepons by select
 
 >In case you make a wrong connection, click close port and choose another port. Then click Open port again.
 Input UserName and Gender then RUN EXPERIMENT. These data is used to create a text file with user data and his/her answers later in the experiment.
+
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut4.png)
  
 An experiment window will appear in fullscreen mode.
 
@@ -36,10 +59,18 @@ After the experiment finished, Keepon says Thank you and user can QUIT or View L
 
 >If the same user runs again the experiment, the log file will be continued. Each experiment log is saved together with the time.
 
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut5.png)
+
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut6.png)
+
 ##Create the database
 
 The database is organized as the following figure.  If you are using VS to run the software, the database is stored under bin/Debug/_data/
-   
+
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut7.png)
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut8.png)
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut9.png)
+
 question_xx folder is used to store the context of question number xx.
 
 >Pictures of the left and right images must be name 1 and 2.
