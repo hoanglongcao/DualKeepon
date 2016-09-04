@@ -9,7 +9,10 @@ A portable system with My Keepon robots to study user preferences using a pairwi
 
 A tutorial of hacking MyKeepon robot can  be found in our website: http://probo.vub.ac.be/HackingKeepon. For this DualKeepon project, no shield for Arduino is needed.
 
-This work was presented at RO-MAN 2014:
+This work was presented at the 2013 International Summer School on Social HRI and RO-MAN 2014.
+
+Atelier 3: Hacking Keepon – Bram Vanderborght, Cao Hoang Long, Greet Van de Perre (Vrije Universiteit Brussel, Belgium) and James Kennedy and Tony Belpaeme (Plymouth University, UK)
+http://www.tech.plymouth.ac.uk/SoccE/ALIZ-E/summerschool/programme2.html
 
 H.-L. Cao, G. Van de Perre, R. Simut, C. Pop, A. Peca, D. Lefeber, and B. Vanderborght, "Enhancing my keepon robot: A simple and low-cost solution for robot platform in human-robot interaction studies," in Proceedings of the 23rd IEEE International Symposium on Robot and Human Interactive Communication, Edinburgh, UK, August 2014, pp. 555-560. 
 http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6926311
