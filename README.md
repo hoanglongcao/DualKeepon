@@ -23,25 +23,30 @@ http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6926311
 
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/summerschool-1.jpg)
 
-##Hardware connection
-Upload the Arduino firmware (new and stable). Arduino Nano with ATmega328P. Baud rate 9600.
+##Hardware
 
-Connect 2 Arduinos to 2 USB ports of PC.
+The schematic and PCB layout can be downloaded here: https://github.com/hoanglongcao/DualKeepon/tree/master/PCB
 
-Connect to the stereo output of PC.
+Harware connection
 
-Connect to LEFT Keepon and RIGHT Keepon. The connector has 6 contact points: (V0,CL,DA,GND) as in the previous Hacking Keepon project, and (S+ and S-) which are the connection to Keepon’s speaker. The (X) pin is unused.
+>Upload the Arduino firmware (new and stable). Arduino Nano with ATmega328P. Baud rate 9600.
 
-How to connect to Keepon’s speaker: Pull out the speaker connection and connect it with 2 wires to (S+ and S-).
+>Connect 2 Arduinos to 2 USB ports of PC.
+
+>Connect to the stereo output of PC.
+
+>Connect to LEFT Keepon and RIGHT Keepon. The connector has 6 contact points: (V0,CL,DA,GND) as in the previous Hacking Keepon project, and (S+ and S-) which are the connection to Keepon’s speaker. The (X) pin is unused.
 
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut1.png)
 
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut2.jpg)
 
+How to connect to Keepon’s speaker: Pull out the speaker connection and connect it with 2 wires to (S+ and S-).
+
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut3.png)
 
 ##How to use the software
-Visual Studio 2013 is used. New versions should be able to run the software.
+Visual Studio 2013 is used. New versions should be able to run the software. The software source code can be downloaded here: https://github.com/hoanglongcao/DualKeepon/tree/master/Software-VS2013
 
 After running the software, 2 windows appear to connect with 2 Keepons by selecting the corresponding COM Ports. Make sure that you connect the ViKeepon LEFT to the LEFT Keepon and the ViKeepon RIGHT to the right one. You can test if you connect correctly by clicking Jump or Bend button.
 
