@@ -1,6 +1,16 @@
 # DualKeepon
 A portable system with My Keepon robots to study user preferences using a pairwise comparison method.
 
+This project is a collaboration between:
+>Robotics and Multibody Mechanics Research Group (Vrije University Brussel)
+
+>Human-Robot Interaction Lab (University of Southern Denmark).
+
+Contact:
+> Hoang-Long Cao: hoancao (at) vub (dot) ac (dot) be
+
+> Lars Christian Jensen: larscj (at) sdu (dot) dk
+
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/Dual-Keepon-speech.png)
 
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/DualKeepon-Hardware.png)
