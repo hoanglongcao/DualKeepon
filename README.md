@@ -37,6 +37,22 @@ http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6926311
 
 The schematic and PCB layout can be downloaded here: https://github.com/hoanglongcao/DualKeepon/tree/master/PCB
 
+![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/Dual-Keepon-hardware-connection.png)
+
+Bill of material for our PCB:
+
+> Arduino Nao x 2: https://www.arduino.cc/en/Main/ArduinoBoardNano
+
+> ![alt tag](https://www.arduino.cc/en/uploads/Main/ArduinoNanoFront_3_sm.jpg)
+
+> PAM8403 amplifier board: https://www.amazon.co.uk/Super-PAM8403-Digital-Amplifier-2-5-5V-Black/dp/B00EZI0RGA
+
+> ![alt tag](https://images-na.ssl-images-amazon.com/images/I/3197BYooYjL.jpg)
+
+> SparkFun TRRS 3.5mm Jack Breakout: https://www.sparkfun.com/products/11570
+
+> ![alt tag](https://images-na.ssl-images-amazon.com/images/I/41BiLP9r57L._SY300_.jpg)
+
 Harware connection
 
 >Upload the Arduino firmware (new and stable). Arduino Nano with ATmega328P. Baud rate 9600.
