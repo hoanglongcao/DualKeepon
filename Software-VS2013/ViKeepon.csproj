@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBE71346-25BB-4D3D-B91E-EE027947F8D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SerialPortTerminal</RootNamespace>
+    <AssemblyName>ViKeepon</AssemblyName>
+    <ApplicationIcon>ViKeepon-Icon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>7319410346F9F2C05D3BBEFD45C3EC325C1A4589</ManifestCertificateThumbprint>
+    <ManifestKeyFile>ViKeepon_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\ViKeepon\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KeeponExperiment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeeponExperiment.Designer.cs">
+      <DependentUpon>KeeponExperiment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminal2.designer.cs">
+      <DependentUpon>Terminal2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Terminal1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminal1.designer.cs">
+      <DependentUpon>Terminal1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="KeeponExperiment.resx">
+      <DependentUpon>KeeponExperiment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal2.resx">
+      <DependentUpon>Terminal2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminal1.resx">
+      <DependentUpon>Terminal1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="App.config" />
+    <None Include="bin\Debug\ViKeepon.exe.config" />
+    <None Include="bin\Release\ViKeepon.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vubsmall.gif" />
+    <None Include="Resources\CRNSsmall.png" />
+    <None Include="bin\Debug\ViKeepon.exe" />
+    <None Include="bin\Debug\ViKeepon.pdb" />
+    <Content Include="bin\Debug\_data\1.jpg" />
+    <Content Include="bin\Debug\_data\2.jpg" />
+    <Content Include="bin\Debug\_data\question_01\1.png" />
+    <Content Include="bin\Debug\_data\question_01\2.png" />
+    <Content Include="bin\Debug\_data\question_01\question.txt" />
+    <Content Include="bin\Debug\_data\question_01\_audio\1_Paula.wav" />
+    <Content Include="bin\Debug\_data\question_01\_audio\2_Paul.wav" />
+    <Content Include="bin\Debug\_data\question_01\_audio\3_Paula.wav" />
+    <Content Include="bin\Debug\_data\question_01\_audio\4_Paul.wav" />
+    <Content Include="bin\Debug\_data\question_02\1.jpeg" />
+    <Content Include="bin\Debug\_data\question_02\2.jpg" />
+    <Content Include="bin\Debug\_data\question_02\question.txt" />
+    <Content Include="bin\Debug\_data\question_02\_audio\1_Paul.wav" />
+    <Content Include="bin\Debug\_data\question_02\_audio\2_Paula.wav" />
+    <Content Include="bin\Debug\_data\question_02\_audio\3_Paul.wav" />
+    <Content Include="bin\Debug\_data\question_03\1.jpg" />
+    <Content Include="bin\Debug\_data\question_03\2.jpg" />
+    <Content Include="bin\Debug\_data\question_03\question.txt" />
+    <Content Include="bin\Debug\_data\question_03\_audio\1_Paula.wav" />
+    <Content Include="bin\Debug\_data\question_03\_audio\2_Paul.wav" />
+    <Content Include="bin\Debug\_data\question_03\_audio\3_Paula.wav" />
+    <Content Include="bin\Debug\_data\question_04\1.jpg" />
+    <Content Include="bin\Debug\_data\question_04\2.jpg" />
+    <Content Include="bin\Debug\_data\question_04\question.txt" />
+    <Content Include="bin\Debug\_data\question_04\_audio\1_Paul.wav" />
+    <Content Include="bin\Debug\_data\question_04\_audio\2_Paula.wav" />
+    <Content Include="bin\Debug\_data\question_04\_audio\3_Paul.wav" />
+    <Content Include="bin\Debug\_data\question_05\1.jpg" />
+    <Content Include="bin\Debug\_data\question_05\2.jpg" />
+    <Content Include="bin\Debug\_data\question_05\question.txt" />
+    <Content Include="bin\Debug\_data\question_05\_audio\1_Paula.wav" />
+    <Content Include="bin\Debug\_data\question_05\_audio\2_Paul.wav" />
+    <Content Include="bin\Debug\_data\question_05\_audio\3_Paula.wav" />
+    <Content Include="bin\Debug\_data\users\long_Male.txt" />
+    <Content Include="bin\Debug\_data\_greatchoice_Paul.wav" />
+    <Content Include="bin\Debug\_data\_greatchoice_Paula.wav" />
+    <Content Include="bin\Debug\_data\_thankyou_Paul.wav" />
+    <None Include="bin\Release\ViKeepon.exe" />
+    <None Include="bin\Release\ViKeepon.pdb" />
+    <Content Include="bin\Release\_data\1.jpg" />
+    <Content Include="bin\Release\_data\2.jpg" />
+    <Content Include="bin\Release\_data\question_01\1.png" />
+    <Content Include="bin\Release\_data\question_01\2.png" />
+    <Content Include="bin\Release\_data\question_01\question.txt" />
+    <Content Include="bin\Release\_data\question_01\_audio\1_Paula.wav" />
+    <Content Include="bin\Release\_data\question_01\_audio\2_Paul.wav" />
+    <Content Include="bin\Release\_data\question_01\_audio\3_Paula.wav" />
+    <Content Include="bin\Release\_data\question_01\_audio\4_Paul.wav" />
+    <Content Include="bin\Release\_data\question_02\1.jpeg" />
+    <Content Include="bin\Release\_data\question_02\2.jpg" />
+    <Content Include="bin\Release\_data\question_02\question.txt" />
+    <Content Include="bin\Release\_data\question_02\_audio\1_Paul.wav" />
+    <Content Include="bin\Release\_data\question_02\_audio\2_Paula.wav" />
+    <Content Include="bin\Release\_data\question_02\_audio\3_Paul.wav" />
+    <Content Include="bin\Release\_data\question_03\1.jpg" />
+    <Content Include="bin\Release\_data\question_03\2.jpg" />
+    <Content Include="bin\Release\_data\question_03\question.txt" />
+    <Content Include="bin\Release\_data\question_03\_audio\1_Paula.wav" />
+    <Content Include="bin\Release\_data\question_03\_audio\2_Paul.wav" />
+    <Content Include="bin\Release\_data\question_03\_audio\3_Paula.wav" />
+    <Content Include="bin\Release\_data\question_04\1.jpg" />
+    <Content Include="bin\Release\_data\question_04\2.jpg" />
+    <Content Include="bin\Release\_data\question_04\question.txt" />
+    <Content Include="bin\Release\_data\question_04\_audio\1_Paul.wav" />
+    <Content Include="bin\Release\_data\question_04\_audio\2_Paula.wav" />
+    <Content Include="bin\Release\_data\question_04\_audio\3_Paul.wav" />
+    <Content Include="bin\Release\_data\question_05\1.jpg" />
+    <Content Include="bin\Release\_data\question_05\2.jpg" />
+    <Content Include="bin\Release\_data\question_05\question.txt" />
+    <Content Include="bin\Release\_data\question_05\_audio\1_Paula.wav" />
+    <Content Include="bin\Release\_data\question_05\_audio\2_Paul.wav" />
+    <Content Include="bin\Release\_data\question_05\_audio\3_Paula.wav" />
+    <Content Include="bin\Release\_data\users\Long_Male.txt" />
+    <Content Include="bin\Release\_data\users\Test_Female.txt" />
+    <Content Include="bin\Release\_data\users\_Female.txt" />
+    <Content Include="bin\Release\_data\_greatchoice_Paul.wav" />
+    <Content Include="bin\Release\_data\_greatchoice_Paula.wav" />
+    <Content Include="bin\Release\_data\_thankyou_Paul.wav" />
+    <Content Include="ViKeepon-Icon.ico" />
+    <None Include="Resources\ViKeepon-smalllogo.JPG" />
+    <None Include="Resources\ViKeepon-03.jpg" />
+    <None Include="Resources\ViKeepon-02.jpg" />
+    <None Include="Resources\ViKeepon-011.jpg" />
+    <None Include="Resources\ViKeepon-01.jpg" />
+    <None Include="ViKeepon_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\" />
+    <Folder Include="obj\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
