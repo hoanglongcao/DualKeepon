@@ -1,0 +1,21 @@
+USER NAME:  - GENDER: Female
+--------------------------------
+Time: 11/30/2015 11:02 AM
+Question 1: Right(Paula)
+--------------------------------
+Time: 11/30/2015 11:03 AM
+--------------------------------
+Time: 11/30/2015 11:11 AM
+--------------------------------
+Time: 11/30/2015 11:36 AM
+Question 1: Right(Paula)
+--------------------------------
+Time: 11/30/2015 11:37 AM
+Question 1: Left(Paul)
+--------------------------------
+Time: 8/31/2016 11:25 AM
+Question 1: Right(Paula)
+Question 2: Right(Paula)
+Question 3: Left(Paul)
+Question 4: Right(Paula)
+Question 5: Left(Paul)

@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ViKeepon.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="ViKeepon-Icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ViKeepon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ViKeepon.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ViKeepon.exe" size="204288">
+      <assemblyIdentity name="ViKeepon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tegXiu6+jOFeSdYavegYifvhxHjyHFMES9WAh+aNXbc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="App.config" size="1495">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sfrxK/ltwJ6yDY8F6cnHXvNS4JsOvLaAmwoUDuGvmKQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\_greatchoice_Paul.wav" size="225910">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mEw3489tk/tRpeC3oPSDWzUeSVhwc4RH/rQ0UPWsqbY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\_greatchoice_Paula.wav" size="225910">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4uEXohtG+yeSiS4rpr2AqAlolkJ0O0tzCWk3d8rZwVY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\_thankyou_Paul.wav" size="592670">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1xx4KHBB2pFEkKm2V8A/Z8kFDaELPJ9KmziuGhTeXK4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\1.jpg" size="44404">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iN6xMeXofZ7mMixWqPoeQrzl2QsX7RcYIwncc5ch0hA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\2.jpg" size="17629">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>msg3wysIJhWNgNP4gl5T3N0VTYUg0QXajYt5tUaP6+g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_01\_audio\1_Paula.wav" size="719626">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iHDML/YM4RSc66xMj43dQslbpwlzrnRW365+fC883nk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_01\_audio\2_Paul.wav" size="912410">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LThuEVo4yjGQfCxkvG+PG0FzRE1qX10n5ZJVm5jELNs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_01\_audio\3_Paula.wav" size="776050">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dXaNRdsSIsytojNQXqzd4vZnXT+vRzUM7k2w6JwSHR8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_01\_audio\4_Paul.wav" size="761942">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>V8KL+z8+WFMRtNQxFFM9wtPCfk1R6LdkZofzPL02YY4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_01\1.png" size="7958">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GXlh12fxeQbU0PuQgC6rWUo5stTng1HtD8/cjpRb/1Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_01\2.png" size="7234">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ln72urGRfHVFIUsUy4v6f9cxeAgKKPXzDjLaMiw0Tts=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_01\question.txt" size="61">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ps4kNHr00J0PmaiSZp2j6YaFamYYYsPoj2XzX0dS1D0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_02\_audio\1_Paul.wav" size="526842">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/aPgyuGU3GiblOUzNmbjn6WmE7hs8qyGxZ61ugBt2Yg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_02\_audio\2_Paula.wav" size="540950">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pKiYnpVvizp5ydtsX+IVhtfvXVCfn0cmPe96ciKtTSA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_02\_audio\3_Paul.wav" size="578566">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>n/dFz+SlSQOAWY2HYWJIh5v9qG7J79ycRs1tDfQDAWA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_02\1.jpeg" size="96431">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GFolSJh+a1wUzmY0syvSqu6pBX6eNsol0vEeNlZMK2M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_02\2.jpg" size="135917">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7ebdmsN3nECUVRAuJQzWRcLHsAwVWEu9Fe3KeO+5V9g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_02\question.txt" size="63">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>K1V37GbI45t5njUsDmJyalEtaDuofHIBks6wHTjXBgA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_03\_audio\1_Paula.wav" size="790154">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/frLjkOuffZoOCVOE+L3K2s7DfisrWRFnWNOsaqkoII=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_03\_audio\2_Paul.wav" size="515078">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4PPuPi+OHN4ZKK/0y2hR1M0sKAH/VltGcgAxGfAWVPc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_03\_audio\3_Paula.wav" size="644394">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vy0vH1ggL3HbJEkEy7T9UPClMTnA0aRmuGrfCLU6200=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_03\1.jpg" size="39470">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3YlZvv13gUBgjPSveIO6KY/N5JT5SDkFEB7+W7LtZhI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_03\2.jpg" size="46816">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zPq4ROlWw9MZrJO9nqCb2mBYBS9MH/erCfv4LZJ+ME8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_03\question.txt" size="64">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mOi8m7s/R4HXaxjGy1rtNRTbFnMn8Jdh1PiRRksThKs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_04\_audio\1_Paul.wav" size="658498">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5si/Qa8uqsQ/Rlj7hpkAarrABlFv2PwTyr8tNolhy1s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_04\_audio\2_Paula.wav" size="451610">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TTaDNLzmY/CylTtKfLaiABulU5uFmr66+trZOiG7KtQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_04\_audio\3_Paul.wav" size="578566">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ThSXm25q3h0FL9VfqR/PokLbk9ovU3BocFoCdjW3/UA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_04\1.jpg" size="432933">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>P6zlW5UCw4qjyIEfqcGHgAa9OMn8KYrh4YxJc2tQhCg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_04\2.jpg" size="105604">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>30flZUEpPjxovNe22QeeQqPnOQ6dHg+QC4zaGtzkIqk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_04\question.txt" size="65">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9Mqxj1OZ41QbkIajES8QVcNJEySrfFZrVeWV85dOsdA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_05\_audio\1_Paula.wav" size="752538">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mBN1ATi1o+tismLkPL91Hw1F+eeJrv3rpUVb6HKqrVw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_05\_audio\2_Paul.wav" size="437506">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oFkqN99qSLnrAxAG4hNg3xjdEZl3HHI+fcXDQFqKWXo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_05\_audio\3_Paula.wav" size="644394">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>V8qLgXQ5pjQ7bCdrbfwQneliAcTtuPu0T9CN8Ahz2/4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_05\1.jpg" size="82520">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>s/+VGZCxcaTe/cOaBCpcIE5XNcFYXwjAuMgeb31qYnE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_05\2.jpg" size="54358">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vAWNHlOFYkoSIDM2a6eooUPsJM4EHABV84Jr90BUSzA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\question_05\question.txt" size="67">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ADLlMjekwrEVAibK9FQpvFfQgAD3BNQHyqLIXVi+TtI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="bin\Debug\_data\users\long_Male.txt" size="210">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FGUslC8Ek1r65Hk5HsKouijuc8PzTdnaS55uFQOWGf0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ViKeepon.exe.config" size="1495">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sfrxK/ltwJ6yDY8F6cnHXvNS4JsOvLaAmwoUDuGvmKQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ViKeepon-Icon.ico" size="5430">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>01zRCHFnrQtjItf/2v8EWk065MIcz8Ga7UC6nBYPD4g=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>

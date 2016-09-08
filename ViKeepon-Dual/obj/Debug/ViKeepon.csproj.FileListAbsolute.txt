@@ -1,0 +1,68 @@
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\Interop.WMPLib.dll
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\ViKeepon.csproj.ResolveComReference.cache
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmKeeponExperiment.resources
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmTerminal2.resources
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmTerminal1.resources
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\SerialPortTerminal.Properties.Resources.resources
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\ViKeepon.csproj.GenerateResource.Cache
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\ViKeepon.exe.manifest
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\ViKeepon.exe
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\ViKeepon.pdb
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\bin\Debug\ViKeepon.exe.config
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\bin\Debug\ViKeepon.exe.manifest
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\bin\Debug\ViKeepon.application
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\bin\Debug\ViKeepon.exe
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\bin\Debug\ViKeepon.pdb
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\ViKeepon.application
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Software\ViKeepon-Dual\obj\Debug\ViKeepon.csprojResolveAssemblyReference.cache
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.exe.config
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\Interop.WMPLib.dll
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.csproj.ResolveComReference.cache
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.exe
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.pdb
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.exe.manifest
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.application
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.exe
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.pdb
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.csprojResolveAssemblyReference.cache
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmKeeponExperiment.resources
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmTerminal2.resources
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmTerminal1.resources
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.Properties.Resources.resources
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.csproj.GenerateResource.Cache
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.exe.manifest
+C:\Users\HoangLong\Dropbox (Personal)\Projects\Keepon-Denmark\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.application
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.exe.config
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\Interop.WMPLib.dll
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.csproj.ResolveComReference.cache
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.exe
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.pdb
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.exe.manifest
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.application
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.exe
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.pdb
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.csprojResolveAssemblyReference.cache
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmKeeponExperiment.resources
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmTerminal2.resources
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmTerminal1.resources
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.Properties.Resources.resources
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.csproj.GenerateResource.Cache
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.exe.manifest
+C:\Users\Lars\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.application
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.exe.config
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\Interop.WMPLib.dll
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.csproj.ResolveComReference.cache
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.exe
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.pdb
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.exe.manifest
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.application
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.exe
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\bin\Debug\ViKeepon.pdb
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.csprojResolveAssemblyReference.cache
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmKeeponExperiment.resources
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmTerminal2.resources
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.frmTerminal1.resources
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\SerialPortTerminal.Properties.Resources.resources
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.csproj.GenerateResource.Cache
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.exe.manifest
+C:\Users\larscj\Dropbox\Dual Keepon Manual\ViKeepon-Dual\obj\Debug\ViKeepon.application
