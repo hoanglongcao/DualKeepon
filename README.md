@@ -1,5 +1,5 @@
 # DualKeepon
-A portable system with My Keepon robots to study user preferences using a pairwise comparison method.
+A portable system with My Keepon robots to study linguistic and para-linguistic features of speech
 
 This project is a collaboration between:
 >Robotics and Multibody Mechanics Research Group (Vrije University Brussel)
