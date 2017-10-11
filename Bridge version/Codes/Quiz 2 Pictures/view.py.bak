@@ -1,0 +1,238 @@
+# -*- coding: iso-8859-1 -*-
+
+from Tkinter import *
+from PIL import Image, ImageTk
+
+import math 
+
+import data as d
+import logic as l
+import controller as c
+import postQuestionnaire as p
+
+# Reminder: The font is given is point.
+
+def welcome():
+    """Create the welcome Window"""
+    window = Tk()
+    window.title('Robot Quiz')
+    widthScreen = window.winfo_screenwidth()
+    heightScreen = window.winfo_screenheight()
+    window.attributes("-fullscreen", True)#full screen disavantage:toolbar disappear
+
+	##### TEXT #####
+    frameText = Frame(window,width = int(0.2*widthScreen),height = int(0.5*heightScreen))
+    frameText.grid(row = 0, column = 1)
+    frameText.pack_propagate(False)
+    fieldLabel = Label(frameText,text=d.texts_out["Welcome text"],font = ('',int(20.0/768.0*heightScreen), "bold"),wraplength = int(0.2*widthScreen))
+    fieldLabel.pack()
+
+	##### PICTURES ####
+    pictureRight = l.resizePicture(d.texts_out["Right Picture"],int(0.7*heightScreen))
+    pictureLeft = l.resizePicture(d.texts_out["Left Picture"],int(0.7*heightScreen))
+    photoRight = ImageTk.PhotoImage(file = pictureRight)
+    photoLeft = ImageTk.PhotoImage(file = pictureLeft)
+    labelRight = Label(window,image = photoRight)
+    labelLeft = Label(window,image = photoLeft)
+    labelRight.grid(row = 0, column = 2)
+    labelLeft.grid(row = 0, column = 0)
+
+    ##### BUTTON #####
+    button = Button(frameText,text = d.texts_out["Next"],font = ('',int(15.0/768.0*heightScreen), "bold"),\
+                    command = window.destroy,width = int(0.01*widthScreen),height = int(0.001*heightScreen))
+    button.pack(side = "bottom")
+
+    ##### GRAPHICAL INTERFACE + ROBOT BEHAVIOR TOGETHER #####
+    window.update_idletasks()
+    window.update()
+
+    ###### ROBOT #####
+    c.playVoiceWelcome()
+    c.launchRobotWelcome()
+    window.mainloop()
+
+def register():
+    """Creates the register window"""
+    window = Tk()
+    window.title('Robot Quiz')
+    widthScreen = window.winfo_screenwidth()
+    heightScreen = window.winfo_screenheight()
+    window.attributes("-fullscreen", True)#full screen disavantage:toolbar disappear
+    sizeText = int(15.0/768.0*heightScreen)
+
+    ##### INSTRUCTIONS #####
+    frameInstructions = Frame(window)
+    frameInstructions.pack(fill=X)
+    formsLabel = Label(window,text=d.texts_out["Instructions"],font = ('',sizeText, ""),wraplength = int(0.5*widthScreen))
+    formsLabel.pack(fill = X,pady=(int(100.0/768.0*heightScreen),int(50.0/768.0*heightScreen)))
+
+	##### FORM TEXTS #####
+    frameForms = Frame(window)
+    frameForms.pack()
+    nameLabel = Label(frameForms,text=d.texts_out["Name"],font = ('',sizeText, ""),wraplength = int(0.2*widthScreen))# anchor and justify don't work!
+    nameLabel.grid(row = 0, column = 0,pady=int(20.0/768.0*heightScreen))
+    firstNameLabel = Label(frameForms,text=d.texts_out["First name"],font = ('',sizeText, ""),wraplength = int(0.2*widthScreen))
+    firstNameLabel.grid(row = 1, column = 0,pady=int(20.0/768.0*heightScreen))
+    ageLabel = Label(frameForms,text=d.texts_out["Age"],font = ('',sizeText, ""),wraplength = int(0.2*widthScreen))
+    ageLabel.grid(row = 2, column = 0,pady=int(30.0/768.0*heightScreen))
+    genderLabel = Label(frameForms,text=d.texts_out["Gender"],font = ('',sizeText, ""),wraplength = int(0.2*widthScreen))
+    genderLabel.grid(row = 3, column = 0,pady=int(30.0/768.0*heightScreen))
+
+    ##### INPUT NAME #####
+    nameEntry = StringVar()
+    lineName = Entry(frameForms, textvariable = nameEntry, width=int(30.0/768.0*heightScreen),font = ('',sizeText, ""))
+    lineName.grid(row = 0, column = 1)
+    firstNameEntry = StringVar()
+    lineFirst = Entry(frameForms, textvariable = firstNameEntry, width=int(30.0/768.0*heightScreen),font = ('',sizeText, ""))
+    lineFirst.grid(row = 1, column = 1)
+
+    ##### LISTBOX AGE #####
+##    exportselection=0
+    frameAge = Frame(frameForms)
+    frameAge.grid(row = 2, column = 1)
+    listeAge = Listbox(frameAge,height=int(9.0/768.0*heightScreen),exportselection=0)#height = number of selection which appear at the same time
+    # exportselection=0 is for being able to select each listbox (and not only one selection for the whole window)
+    sbar = Scrollbar(frameAge)
+    sbar.config(command=listeAge.yview)
+    listeAge.config(yscrollcommand=sbar.set,font = ('',sizeText, ""))
+    sbar.pack(side=RIGHT, fill=Y)
+    listeAge.pack(side=LEFT, expand=YES, fill=BOTH)
+    age = 19
+    while age < 75:
+        age = age + 1
+        listeAge.insert(END, age)
+
+    ##### GENDER #####
+    listeGender = Listbox(frameForms,height=2,exportselection=0,font = ('',sizeText, ""))
+    listeGender.grid(row = 3, column = 1)
+    listeGender.insert(0,d.texts_out["Male"])
+    listeGender.insert(1,d.texts_out["Female"])
+
+    ##### BUTTON CONTINUE #####
+    buttonBegin = Button(window, text=d.texts_out["Next"],font = ('',sizeText, "bold"),\
+                         command = lambda : l.buttonRegister(window,nameEntry.get(),firstNameEntry.get(),listeAge,listeGender,\
+                                                             lineName,lineFirst))
+    buttonBegin.pack()
+##    buttonQuit = Button(window,text="STOP",font = ('',sizeText, "bold"),command = window.destroy)
+##    buttonQuit.pack(pady=int(20.0/768.0*heightScreen))
+    window.mainloop()
+
+def rules():
+    """Creates the rules window"""
+    window = Tk()
+    window.title('Robot Quiz')
+    widthScreen = window.winfo_screenwidth()
+    heightScreen = window.winfo_screenheight()
+    window.attributes("-fullscreen", True)#full screen disavantage:toolbar disappear
+    rulesLabel = Label(window,text=d.texts_out["Rules"],font = ('',int(15.0/768.0*heightScreen), ""),wraplength = int(0.6*widthScreen))
+    rulesLabel.pack(pady = (int(40.0/768.0*heightScreen)))
+    picture = l.resizePicture(d.texts_out["Rules Picture"],int(0.6*heightScreen))
+    photo = ImageTk.PhotoImage(file = picture)
+    label = Label(window,image = photo)
+    label.pack()
+    buttonBegin = Button(window,text=d.texts_out["Next"],font = ('',int(15.0/768.0*heightScreen), "bold"),command = window.destroy)
+    buttonBegin.pack(pady = (int(40.0/768.0*heightScreen)))
+    window.mainloop()
+
+def end():
+    """Creates the end window"""
+    window = Tk()
+    window.title('Robot Quiz')
+    widthScreen = window.winfo_screenwidth()
+    heightScreen = window.winfo_screenheight()
+    window.attributes("-fullscreen", True)#full screen disavantage:toolbar disappear
+
+    ##### TEXT #####
+    endLabel = Label(window,text=d.texts_out["End text"],font = ('',int(15.0/768.0*heightScreen), ""),wraplength = int(0.6*widthScreen))
+    endLabel.pack(pady = int(40.0/768.0*heightScreen))
+
+    ##### PICTURE #####
+    picture = l.resizePicture(d.texts_out["End Picture"],int(0.6*heightScreen))
+    photo = ImageTk.PhotoImage(file = picture)
+    label = Label(window,image = photo)
+    label.pack()
+
+    ##### BUTTON #####
+    buttonQuit = Button(window, text=d.texts_out["Quit"],font = ('',int(15.0/768.0*heightScreen), "bold"), command = window.destroy)
+    buttonQuit.pack(pady = int(40.0/768.0*heightScreen))
+
+    ##### GRAPHICAL INTERFACE + ROBOT BEHAVIOR TOGETHER #####
+    window.update_idletasks()
+    window.update()
+
+    ##### ROBOT #####
+    c.playVoiceEnd()
+    c.launchRobotEnd()
+    window.mainloop()
+
+def quiz():
+    """Creates the quiz window"""
+    window = Tk()
+    window.title('Robot Quiz')
+    widthScreen = window.winfo_screenwidth()
+    heightScreen = window.winfo_screenheight()
+    window.attributes("-fullscreen", True)#full screen disavantage:toolbar disappear
+    numberQuestion = d.question_i
+
+    ##### TEXT #####
+    frameText = Frame(window)
+    frameText.pack(pady = int(0.05*heightScreen))
+    fieldLabel = Label(frameText,text=d.messages_quiz[numberQuestion],font = ('',int(13.0/768.0*heightScreen), ""),wraplength = int(0.6*widthScreen))#in screen units
+    fieldLabel.pack()
+
+    ##### BUTTONS #####
+    listeAnswer = []
+    numberChoice = {"right":0, "left" : 0}
+    frameButtons = Frame(window)
+    frameButtons.pack()
+    pictureLeft = l.resizePicture(d.pictures_left[numberQuestion],int(0.6*heightScreen))
+    pictureRight = l.resizePicture(d.pictures_right[numberQuestion],int(0.6*heightScreen))
+    photoLeft = ImageTk.PhotoImage(file = pictureLeft)
+    photoRight = ImageTk.PhotoImage(file = pictureRight)
+    buttonLeft = Button(frameButtons,image=photoLeft)
+    buttonRight = Button(frameButtons,image=photoRight)
+    buttonLeft.pack(side = "left")
+    buttonRight.pack(side = "right")
+
+    ##### GRAPHICAL INTERFACE + ROBOT BEHAVIOR TOGETHER #####
+    window.update_idletasks()
+    window.update()
+
+    ##### ROBOT #####
+    length = c.getLengthAudio(numberQuestion)
+    c.playVoiceQuestion(numberQuestion)
+    c.launchRobotQuestion(numberQuestion)
+    window.after(int(1000*math.ceil(length)),l.changeCommand,window,heightScreen,buttonRight,buttonLeft,fieldLabel,listeAnswer,numberChoice,numberQuestion)
+    # use of ceil to round because after accepts only int then the function changeCommand and then its arguments
+    window.mainloop()
+
+def windowAlertControl():
+    """Creates an alert window to alert if the Excel file
+	in the General sheet is wrongly completed"""
+    window = Tk()
+    window.title('Alert')
+    alertLabel = Label(window, text = "You haven't correctly filled the Excel file.")
+    alertLabel.pack()
+    button = Button(window,text = 'OK', command = window.destroy)
+    button.pack()
+    window.mainloop()
+
+def main():
+    count1 = l.configurationCheck(d.configuration_places,1L)
+    count2 = l.configurationCheck(d.configuration_robot,1L)
+    count3 = l.configurationCheck(d.texts_out,None)
+    if count1 != 1 or count2 != 1 or count3 != 0:
+        windowAlertControl()
+    else:
+		c.wakeUpRobot()
+        c.initializeRobot()
+		c.volumeRobot()
+        welcome()
+        register()
+        rules()
+        quiz()
+        end()
+		c.restRobot()
+        p.postQuestionnaire()
+
+main()

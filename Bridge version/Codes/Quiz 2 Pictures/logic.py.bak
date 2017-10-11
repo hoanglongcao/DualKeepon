@@ -1,0 +1,185 @@
+from Tkinter import *
+from PIL import Image, ImageTk
+
+import math
+
+import data as d
+import controller as c
+
+sheet_data_voices = d.excel_file['Datas Gendered Voices']
+sheet_data_appearance = d.excel_file['Datas Identical Voices']
+sheet_data_teacher_and_peer = d.excel_file['Datas Teacher and Peer']
+
+liste_participant_data = []
+
+def configurationCheck(dictionnary,val):
+    """To check the dictionary for the General sheet"""
+    count = 0
+    for value in dictionnary.values():
+        if value == val:
+            count = count + 1
+    return count
+
+def resizePicture(a,height):
+    """Resize the picture in the wanted height
+    Argument:
+    - a = str of the pictures
+    - height = height of the picture in pixel
+    """
+    img = Image.open(a)
+    x, y = img.size
+    yNew = height
+    xNew = int(yNew*float(x)/y)
+    newImage = img.resize((xNew,yNew),Image.ANTIALIAS)
+    newImage.save(a)
+    return a
+
+def buttonRegister(window,name,firstName,listeAge,listeGender,lineName,lineFirst):
+    """Manage the button for the register window
+    Store the personal data of the participant in the global variable
+    liste_participant_data"""
+    a = listeAge.curselection()
+    b = listeGender.curselection()
+    # verify if the fields are completed
+    # if not, the field is put in red
+    if name == "":
+        lineName["bg"] = "red"
+    if firstName == "":
+        lineFirst["bg"] = "red"
+    if a == ():
+        listeAge["bg"] = "red"
+    if b == ():
+        listeGender["bg"] = "red"
+    else:
+        age = listeAge.get(a)
+        gender = listeGender.get(b)
+        liste_participant_data.append(name)
+        liste_participant_data.append(firstName)
+        liste_participant_data.append(age)
+        liste_participant_data.append(gender)
+        window.destroy()
+
+def configurationGenderedVoice(listeAnswer,numberChoice):
+	"""Reorganized the results of the quiz following
+    the configuration of the system (gendered voices)"""
+    if d.role_definition == 'Left Female & Right Male':
+        numberChoiceFemale = numberChoice["left"]
+        numberChoiceMale = numberChoice["right"]
+    elif d.role_definition == 'Left Male & Right Female':
+        numberChoiceMale = numberChoice["left"]
+        numberChoiceFemale = numberChoice["right"]
+        for i in range(len(listeAnswer)):
+            if listeAnswer[i] == 0:
+                listeAnswer[i] = 1
+            else:
+                listeAnswer[i] = 0
+    return listeAnswer,[numberChoiceFemale,numberChoiceMale]
+
+def configurationIdenticalVoice(listeAnswer,numberChoice):
+    if d.robots_definition == 'Left Keepon & Right Nao':
+        numberChoiceKeepon = numberChoice["left"]
+        numberChoiceNao = numberChoice["right"]
+        for i in range(len(listeAnswer)):
+            if listeAnswer[i] == 0:
+                listeAnswer[i] = 1
+            else:
+                listeAnswer[i] = 0
+    elif d.robots_definition == 'Left Nao & Right Keepon':
+        numberChoiceKeepon = numberChoice["right"]
+        numberChoiceNao = numberChoice["left"]
+    return listeAnswer,[numberChoiceKeepon,numberChoiceNao]
+
+def configurationTeacherPeer(listeAnswer,numberChoice):
+    if d.robots_definition == 'Left Teacher & Right Peer':
+        numberChoiceTeacher = numberChoice["left"]
+        numberChoicePeer = numberChoice["right"]
+        for i in range(len(listeAnswer)):
+            if listeAnswer[i] == 0:
+                listeAnswer[i] = 1
+            else:
+                listeAnswer[i] = 0
+    elif d.robots_definition == 'Left Peer & Right Teacher':
+        numberChoiceTeacher = numberChoice["right"]
+        numberChoicePeer = numberChoice["left"]
+    return listeAnswer,[numberChoiceKeepon,numberChoiceNao]
+
+def writeExcel(listeAnswer,numberChoice):
+	"""Write and save all the information (participant's data, answers
+    from the quiz) in the Excel file"""
+    listeConfiguration = [d.robots_definition,d.role_definition]
+    if d.role_definition == 'Left Female & Right Male' or d.role_definition == 'Left Male & Right Female':
+        a,b = configurationGenderedVoice(listeAnswer,numberChoice)
+        liste = d.liste_time + listeConfiguration + liste_participant_data + a + b
+        sheet_data_voices.append(liste)
+    elif d.role_definition == 'Left Male & Right Male' or d.role_definition == 'Left Female & Right Female':
+        a,b = configurationIdenticalVoice(listeAnswer,numberChoice)
+        liste = d.liste_time + listeConfiguration + liste_participant_data + a + b
+        sheet_data_appearance.append(liste)
+    elif d.role_definition == 'Left Teacher & Right Peer' or d.role_definition == 'Left Peer & Right Teacher':
+        a,b = configurationTeacherPeer(listeAnswer)
+        liste = d.liste_time + listeConfiguration + liste_participant_data + a + b
+        sheet_data_teacher_and_peer.append(liste)
+    d.excel_file.save("Quiz_2_Pictures.xlsx")
+    
+###################### QUIZ: ONE WINDOW FOR ALL QUESTIONS VERSION ###########
+def changeCommand(window,heightScreen,buttonRight,buttonLeft,fieldLabel,listeAnswer,numberChoice,numberQuestion):
+    buttonRight['command'] = lambda : numberClickRight(window,heightScreen,buttonRight,buttonLeft,fieldLabel,listeAnswer,numberChoice,numberQuestion)
+    buttonLeft['command'] = lambda : numberClickLeft(window,heightScreen,buttonRight,buttonLeft,fieldLabel,listeAnswer,numberChoice,numberQuestion)
+
+def numberClickRight(window,heightScreen,buttonRight,buttonLeft,fieldLabel,listeAnswer,numberChoice,numberQuestion):
+    c.initializeRobot()
+    c.launchRobotQuestionEndRight(numberQuestion)
+    c.playVoiceEndQuestionR(numberQuestion)
+    numberChoice["right"] = numberChoice["right"]+1
+    listeAnswer.append(1)
+    numberQuestion = numberQuestion + 1
+    if numberQuestion == d.total_number_question:# end quiz
+        window.destroy()
+        writeExcel(listeAnswer,numberChoice)
+    else:# next question
+        buttonRight['command'] = "None"
+        buttonLeft['command'] = "None"
+        fieldLabel["text"] = d.messages_quiz[numberQuestion]
+        pictureLeft = resizePicture(d.pictures_left[numberQuestion],int(0.6*heightScreen))
+        pictureRight = resizePicture(d.pictures_right[numberQuestion],int(0.6*heightScreen))
+        photoLeft = ImageTk.PhotoImage(file = pictureLeft)
+        photoRight = ImageTk.PhotoImage(file = pictureRight)
+        buttonRight["image"] = photoRight
+        buttonLeft["image"] = photoLeft
+        window.update_idletasks()
+        window.update()
+        ##################################### ROBOT ######################
+        length = c.getLengthAudio(numberQuestion)
+        c.playVoiceQuestion(numberQuestion)
+        c.launchRobotQuestion(numberQuestion)
+        window.after(int(1000*math.ceil(length)),changeCommand,window,heightScreen,buttonRight,buttonLeft,fieldLabel,listeAnswer,numberChoice,numberQuestion)
+    window.mainloop()
+    
+def numberClickLeft(window,heightScreen,buttonRight,buttonLeft,fieldLabel,listeAnswer,numberChoice,numberQuestion):
+    c.initializeRobot()
+    c.launchRobotQuestionEndLeft(numberQuestion)
+    c.playVoiceEndQuestionL(numberQuestion)
+    numberChoice["left"] = numberChoice["left"]+1
+    listeAnswer.append(0)
+    numberQuestion = numberQuestion + 1
+    if numberQuestion == d.total_number_question:# end quiz
+        window.destroy()
+        writeExcel(listeAnswer,numberChoice)
+    else:# next question
+        buttonRight['command'] = "None"
+        buttonLeft['command'] = "None"
+        fieldLabel["text"] = d.messages_quiz[numberQuestion]
+        pictureLeft = resizePicture(d.pictures_left[numberQuestion],int(0.6*heightScreen))
+        pictureRight = resizePicture(d.pictures_right[numberQuestion],int(0.6*heightScreen))
+        photoLeft = ImageTk.PhotoImage(file = pictureLeft)
+        photoRight = ImageTk.PhotoImage(file = pictureRight)
+        buttonRight["image"] = photoRight
+        buttonLeft["image"] = photoLeft
+        window.update_idletasks()
+        window.update()
+        ##################################### ROBOT ######################
+        length = c.getLengthAudio(numberQuestion)
+        c.playVoiceQuestion(numberQuestion)
+        c.launchRobotQuestion(numberQuestion)
+        window.after(int(1000*math.ceil(length)),changeCommand,window,heightScreen,buttonRight,buttonLeft,fieldLabel,listeAnswer,numberChoice,numberQuestion)
+    window.mainloop()

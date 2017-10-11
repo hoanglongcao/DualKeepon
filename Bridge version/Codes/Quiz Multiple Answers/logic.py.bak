@@ -1,0 +1,197 @@
+from Tkinter import *
+from PIL import Image, ImageTk
+
+import math
+
+import data as d
+import controller as c
+
+########################### GLOBAL VARIABLES #############################
+sheet_data_voices = d.excel_file['Datas Gendered Voices']
+sheet_data_appearance = d.excel_file['Datas Identical Voices']
+sheet_data_teacher_and_peer = d.excel_file['Datas Teacher and Peer']
+
+liste_participant_data = []
+
+def configurationCheck(dictionnary,val):
+    """To check the dictionary for the General sheet"""
+    count = 0
+    for value in dictionnary.values():
+        if value == val:
+            count = count + 1
+    return count
+
+def resizePicture(a,height):
+    """Resize the picture in the wanted height
+    Argument:
+    - a = str of the pictures
+    - height = height of the picture in pixel
+    """
+    img = Image.open(a)
+    x, y = img.size
+    yNew = height
+    xNew = int(y_new*float(x)/y)
+    newImage = img.resize((xNew,yNew),Image.ANTIALIAS)
+    newImage.save(a)
+    return a
+
+def windowAlert():
+    """ Window alert to prevent if the participant has wrongly completed
+    his/her personal data
+    """
+    window = Tk()
+    fieldLabel = Label(window, text = d.texts_out["Alert Text"])
+    fieldLabel.pack()
+    button = Button(window,text = d.texts_out["Quit"], command = window.destroy)
+    button.pack()
+    window.mainloop()
+
+def buttonRegister(window,name,firstName,listeAge,listeGender):
+    a = listeAge.curselection()
+    b = listeGender.curselection()
+    if name == "" or firstName == "" or a == () or b == ():
+        windowAlert()
+    else:
+        age = listeAge.get(a)
+        gender = listeGender.get(b)
+        liste_participant_data.append(name)
+        liste_participant_data.append(firstName)
+        liste_participant_data.append(age)
+        liste_participant_data.append(gender)
+        window.destroy()
+
+def configurationGenderedVoice(listeAnswer):
+    listeAnswerFinal = []
+    numberChoiceFemale = 0
+    numberChoiceMale = 0
+    for j in range(len(listeAnswer)):
+        listeAnswerFinal.append(listeAnswer[j][0])
+        if d.role_definition == 'Left Female & Right Male':
+            if listeAnswer[j][1] == 'right':
+                numberChoiceMale = numberChoiceMale + 1
+                listeAnswerFinal.append(1)
+            else:
+                numberChoiceFemale = numberChoiceFemale + 1
+                listeAnswerFinal.append(0)
+        elif d.role_definition == 'Left Male & Right Female':
+            if listeAnswer[j][1] == 'right':
+                numberChoiceFemale = numberChoiceFemale + 1
+                listeAnswerFinal.append(0)
+            else:
+                numberChoiceMale = numberChoiceMale + 1
+                listeAnswerFinal.append(1)
+    return listeAnswerFinal,[numberChoiceFemale,numberChoiceMale]
+
+def configurationIdenticalVoice(listeAnswer):
+    listeAnswerFinal = []
+    numberChoiceKeepon = 0
+    numberChoiceNao = 0
+    for j in range(len(listeAnswer)):
+        listeAnswerFinal.append(listeAnswer[j][0])
+        if d.robots_definition == 'Left Keepon & Right Nao':
+            if listeAnswer[j][1] == 'right':
+                numberChoiceNao = numberChoiceNao + 1
+                listeAnswerFinal.append(0)
+            else:
+                numberChoiceKeepon = numberChoiceKeepon + 1
+                listeAnswerFinal.append(1)
+        elif d.robots_definition == 'Left Nao & Right Keepon':
+            if listeAnswer[j][1] == 'right':
+                numberChoiceKeepon = numberChoiceKeepon + 1
+                listeAnswerFinal.append(1)
+            else:
+                numberChoiceNao = numberChoiceNao + 1
+                listeAnswerFinal.append(0)
+    return listeAnswerFinal,[numberChoiceNao,numberChoiceKeepon]
+
+def configurationTeacherPeer(listeAnswer):
+    listeAnswerFinal = []
+    numberChoiceTeacher = 0
+    numberChoicePeer = 0
+    for j in range(len(listeAnswer)):
+        listeAnswerFinal.append(listeAnswer[j][0])
+        if d.robots_definition == 'Left Teacher & Right Peer':
+            if listeAnswer[j][1] == 'right':
+                numberChoicePeer = numberChoicePeer + 1
+                listeAnswerFinal.append(0)
+            else:
+                numberChoiceTeacher = numberChoiceTeacher + 1
+                listeAnswerFinal.append(1)
+        elif d.robots_definition == 'Left Peer & Right Teacher':
+            if listeAnswer[j][1] == 'right':
+                numberChoiceTeacher = numberChoiceTeacher + 1
+                listeAnswerFinal.append(1)
+            else:
+                numberChoicePeer = numberChoicePeer + 1
+                listeAnswerFinal.append(0)
+    return listeAnswerFinal,[numberChoicePeer,numberChoiceTeacher]
+
+def writeExcel(listeAnswer):
+    listeConfiguration = [d.robots_definition,d.role_definition]
+    if d.role_definition == 'Left Female & Right Male' or d.role_definition == 'Left Male & Right Female':
+        a,b = configurationGenderedVoice(listeAnswer)
+        liste = d.liste_time + listeConfiguration + liste_participant_data + a + b
+        sheet_data_voices.append(liste)
+    elif d.role_definition == 'Left Male & Right Male' or d.role_definition == 'Left Female & Right Female':
+        a,b = configurationIdenticalVoice(listeAnswer)
+        liste = d.liste_time + listeConfiguration + liste_participant_data + a + b
+        sheet_data_appearance.append(liste)
+    elif d.role_definition == 'Left Teacher & Right Peer' or d.role_definition == 'Left Peer & Right Teacher':
+        a,b = configurationTeacherPeer(listeAnswer)
+        liste = d.liste_time + listeConfiguration + liste_participant_data + a + b
+        sheet_data_teacher_and_peer.append(liste)
+    d.excel_file.save("Quiz_Multiple_Answers.xlsx")
+
+###################### QUIZ: ONE WINDOW FOR ALL QUESTIONS VERSION ###########
+def enableAnswer(frameAnswer):
+    for child in frameAnswer.winfo_children():
+        child.configure(state='normal')
+
+def enableBouton(buttonNext):
+    buttonNext["state"] = NORMAL
+
+def nextQuestion(window,widthScreen,heightScreen,buttonNext,fieldLabel,labelPicture,answerVar,frameAnswer,listeAnswer,numberQuestion):
+    c.initializeRobot()
+    a = d.answers_quiz[numberQuestion][answerVar.get()-1]
+    if a[1] == 'right':
+        c.launchRobotQuestionEndRight(numberQuestion)
+        c.playVoiceEndQuestionR(numberQuestion)
+    else:
+        c.launchRobotQuestionEndLeft(numberQuestion)
+        c.playVoiceEndQuestionL(numberQuestion)
+    c.initializeRobot()
+    listeAnswer.append(d.answers_quiz[numberQuestion][answerVar.get()-1])
+    answerVar.set(0)
+    numberQuestion = numberQuestion + 1
+    ####################### TO destroy all the answers_quiz ################
+    for widget in frameAnswer.winfo_children():
+        widget.destroy()
+    if numberQuestion == d.total_number_question:# end quiz
+        window.destroy()
+        writeExcel(listeAnswer)
+    else:# next question
+        fieldLabel["text"] = d.messages_quiz[numberQuestion]
+        picture = resizePicture(d.list_pictures[numberQuestion],int(0.5*heightScreen))
+        photo = ImageTk.PhotoImage(file = picture)
+        labelPicture["image"] = photo
+        ################################# answers quiz #########################
+        for j in range(len(d.answers_quiz[numberQuestion])):
+            choice = Radiobutton(frameAnswer,indicatoron = 0,text = d.answers_quiz[numberQuestion][j][0],variable = answerVar,value = j + 1,\
+                                 font = ('',int(13.0/768.0*heightScreen), ""),wraplength = int(0.1*widthScreen),\
+                                 command = lambda : enableBouton(buttonNext))
+            choice.pack(side='left',padx=25,expand=1)
+        buttonNext['state'] = "disabled"
+        buttonNext['command'] = lambda : nextQuestion(window,widthScreen,heightScreen,buttonNext,\
+                                                      fieldLabel,labelPicture,answerVar,frameAnswer,listeAnswer,numberQuestion)
+        ####################### TO DISABLE THE frameAnswer ################
+        for child in frameAnswer.winfo_children():
+            child.configure(state='disable')
+        ############## GRAPHICAL INTERFACE + ROBOT BEHAVIOR TOGETHER #############
+        window.update_idletasks()
+        window.update()
+        ##################################### ROBOT ######################
+        length = c.getLengthAudio(numberQuestion)
+        c.playVoiceQuestion(numberQuestion)
+        c.launchRobotQuestion(numberQuestion)
+        window.after(int(1000*math.ceil(length)),enableAnswer,frameAnswer)
+    window.mainloop()
