@@ -1,4 +1,4 @@
-# Bridges for the DualKeepon Projecct
+# Bridges for the DualKeepon Project
 This folder hosts bridges used in the DualKeepon project allowing developers to expand the ssetup to different robot platforms.
 
 At the moment, these bridges are available:
