@@ -1,5 +1,5 @@
 # Bridges for the Dual-Robot Project
-This folder hosts bridges used in the DualKeepon project allowing developers to expand the setup to different robot platforms.
+This folder hosts bridges used in the Dual-Robot project allowing developers to expand the setup to different robot platforms.
 
 At the moment, these bridges are available:
 >MyKeepon (Serial communication - COM port)
