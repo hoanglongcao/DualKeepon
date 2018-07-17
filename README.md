@@ -2,7 +2,7 @@
 A portable system with My Keepon robots to study linguistic and para-linguistic features of speech
 
 This project is a collaboration between:
->Robotics and Multibody Mechanics Research Group (Vrije University Brussel)
+>Robotics and Multibody Mechanics Research Group (Vrije Universiteit Brussel)
 
 >Human-Robot Interaction Lab (University of Southern Denmark).
 
