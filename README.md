@@ -11,11 +11,17 @@ Contact:
 
 > Lars Christian Jensen: larscj (at) sdu (dot) dk
 
+## Publications
+
+1. Cao, H.L., Jensen, L.C., Nghiem, X.N., Vu, H., De Beir, A., Esteban, P.G., Van de Perre, G., Lefeber, D. and Vanderborght, B., 2019. DualKeepon: a human–robot interaction testbed to study linguistic features of speech. Intelligent Service Robotics, 12(1), pp.45-54.
+
+2. Cao, H.L., Van de Perre, G., Simut, R., Pop, C., Peca, A., Lefeber, D. and Vanderborght, B., 2014, August. Enhancing My Keepon robot: A simple and low-cost solution for robot platform in Human-Robot Interaction studies. In The 23rd IEEE International Symposium on Robot and Human Interactive Communication (pp. 555-560). IEEE.
+
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/Dual-Keepon-speech.png)
 
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/DualKeepon-Hardware.png)
 
-##Hacking MyKeepon
+## Hacking MyKeepon
 
 A tutorial of hacking MyKeepon robot can  be found in our website: http://probo.vub.ac.be/HackingKeepon. For this DualKeepon project, no shield for Arduino is needed.
 
@@ -33,7 +39,7 @@ http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6926311
 
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/summerschool-1.jpg)
 
-##Hardware
+## Hardware
 
 The schematic and PCB layout can be downloaded here: https://github.com/hoanglongcao/DualKeepon/tree/master/PCB
 
@@ -97,7 +103,7 @@ After the experiment finished, Keepon says Thank you and user can QUIT or View L
 
 ![alt tag](https://github.com/hoanglongcao/DualKeepon/blob/master/img/tut6.png)
 
-##Create the database
+## Create the database
 
 The database is organized as the following figure.  If you are using VS to run the software, the database is stored under bin/Debug/_data/
 
@@ -126,7 +132,7 @@ File extensions:
 
 >If you want to add more extensions, edit the source code.
 
-##Important notes
+## Important notes
 If you want to replace the files, keep the same names.
 
 Feel free to modify the source code.
